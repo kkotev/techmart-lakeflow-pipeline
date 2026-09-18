@@ -105,6 +105,7 @@ def bronze_order_items():
 
 # DBTITLE 1,Customer rules + quarantine expression
 customers_rules = {
+    "valid_customer_id": "customer_id IS NOT NULL",
     "valid_city": "city IS NOT NULL AND TRIM(city) != ''"
 }
 
