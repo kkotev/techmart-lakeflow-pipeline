@@ -1,0 +1,17 @@
+resources:
+  pipelines:
+    techmart_pipeline:
+      name: TechMart Pipeline
+      catalog: techmart
+      schema: pipeline
+      photon: true
+      serverless: true
+      edition: ADVANCED
+      channel: CURRENT
+      configuration:
+        catalog: techmart
+        raw_data_path: /Volumes/techmart/pipeline/raw_data
+        schema: pipeline
+      libraries:
+        - notebook:
+            path: ../src/techmart_pipeline/02_sdp_pipeline.py

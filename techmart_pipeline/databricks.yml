@@ -1,0 +1,19 @@
+bundle:
+  name: techmart_pipeline
+
+include:
+  - resources/*.yml
+
+targets:
+  dev:
+    mode: development
+    default: true
+
+  prod:
+    mode: production
+    workspace:
+      host: ${var.workspace_host}
+      root_path: /Workspace/Users/${workspace.current_user.short_name}/.bundle/${bundle.name}/prod
+    variables:
+      workspace_host: ""
+
