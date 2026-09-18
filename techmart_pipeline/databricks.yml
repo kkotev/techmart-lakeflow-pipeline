@@ -1,3 +1,4 @@
+# TechMart Pipeline - Declarative Automation Bundle
 bundle:
   name: techmart_pipeline
 
